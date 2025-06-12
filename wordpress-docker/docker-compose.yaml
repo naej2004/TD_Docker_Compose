@@ -30,7 +30,7 @@ services:
       - db  # ➤ WordPress ne démarre que **quand MySQL est prêt** (ordre de dépendance)
 
     ports:
-      - "8090:80"  # ➤ Port 8080 de ta machine → Port 80 du conteneur (HTTP). Donc tu accèdes à WordPress via localhost:8080
+      - "8090:80"  # ➤ Port 8090 de ta machine → Port 80 du conteneur (HTTP). Donc tu accèdes à WordPress via localhost:8090
 
     restart: always  # ➤ Redémarre automatiquement en cas de crash
 
