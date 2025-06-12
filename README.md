@@ -80,9 +80,9 @@ Cela évite de perdre vos données entre deux utilisations du projet.
 
 ## 👨🏽‍💻 Auteur
 
-**KOUASSI KOUAME JEAN-ELIE**
-Étudiant en Réseaux et Génie Logiciel à Pigier Côte d'Ivoire
-Passionné par **l’automatisation, les systèmes embarqués et la robotique**
+- **KOUASSI KOUAME JEAN-ELIE**
+- Étudiant en Réseaux et Génie Logiciel à Pigier Côte d'Ivoire
+- Passionné par **l’automatisation, les systèmes embarqués et la robotique**
 
 ## 📎 Liens utiles
 
