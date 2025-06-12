@@ -20,5 +20,4 @@ Il contient deux services :
 - `wordpress` : application WordPress connectée à la BDD
 
 ## Auteur
-
 KOUASSI KOUAME JEAN-ELIE

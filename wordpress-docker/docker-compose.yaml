@@ -7,7 +7,7 @@ services:
   # --- SERVICE 1 : MySQL (la base de données)
   db:
     image: mysql:latest  # ➤ On utilise l'image officielle de MySQL (version la plus récente)
-    container_name: mysql_db  # ➤ Nom personnalisé du conteneur (utile pour le retrouver avec docker ps)
+    container_name: td_mysql_docker  # ➤ Nom personnalisé du conteneur (utile pour le retrouver avec docker ps)
     restart: always  # ➤ Si le conteneur s'arrête (bug ou redémarrage), Docker le relance automatiquement
 
     # ➤ Volume pour persister les données (même si le conteneur est supprimé, les données restent)
@@ -16,30 +16,30 @@ services:
 
     # ➤ Variables d'environnement pour initialiser la base
     environment:
-      MYSQL_ROOT_PASSWORD: rootpass     # ➤ Mot de passe pour l’utilisateur "root"
-      MYSQL_DATABASE: wordpress         # ➤ Nom de la base créée au démarrage
-      MYSQL_USER: wp_user               # ➤ Nom d’un nouvel utilisateur
-      MYSQL_PASSWORD: wp_pass           # ➤ Son mot de passe
+      MYSQL_ROOT_PASSWORD: Naej2004@#     # ➤ Mot de passe pour l’utilisateur "root"
+      MYSQL_DATABASE: td_wordpress_mysql        # ➤ Nom de la base créée au démarrage
+      MYSQL_USER: naej               # ➤ Nom d’un nouvel utilisateur
+      MYSQL_PASSWORD: Naej2004@#           # ➤ Son mot de passe
 
   # --- SERVICE 2 : WordPress (le site web/blog)
   wordpress:
     image: wordpress:latest  # ➤ Image officielle de WordPress (version la plus récente)
-    container_name: wordpress_app  # ➤ Nom du conteneur WordPress (pour te repérer facilement)
+    container_name: td_wordpress_docker  # ➤ Nom du conteneur WordPress (pour te repérer facilement)
 
     depends_on:
       - db  # ➤ WordPress ne démarre que **quand MySQL est prêt** (ordre de dépendance)
 
     ports:
-      - "8080:80"  # ➤ Port 8080 de ta machine → Port 80 du conteneur (HTTP). Donc tu accèdes à WordPress via localhost:8080
+      - "8090:80"  # ➤ Port 8080 de ta machine → Port 80 du conteneur (HTTP). Donc tu accèdes à WordPress via localhost:8080
 
     restart: always  # ➤ Redémarre automatiquement en cas de crash
 
     # ➤ Variables d’environnement pour que WordPress se connecte à la BDD
     environment:
       WORDPRESS_DB_HOST: db:3306        # ➤ Adresse du service "db" sur le port 3306 (port standard MySQL)
-      WORDPRESS_DB_USER: wp_user        # ➤ Correspond à celui défini dans db
-      WORDPRESS_DB_PASSWORD: wp_pass    # ➤ Idem, correspond au mot de passe défini pour l'utilisateur
-      WORDPRESS_DB_NAME: wordpress      # ➤ Nom de la base, doit correspondre aussi
+      WORDPRESS_DB_USER: naej        # ➤ Correspond à celui défini dans db
+      WORDPRESS_DB_PASSWORD: Naej2004@#    # ➤ Idem, correspond au mot de passe défini pour l'utilisateur
+      WORDPRESS_DB_NAME: td_wordpress_mysql      # ➤ Nom de la base, doit correspondre aussi
 
 # --- Déclaration des volumes (hors des services)
 volumes:
