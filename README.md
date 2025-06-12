@@ -46,8 +46,8 @@ Ce fichier définit deux services **interconnectés** :
 > Avant de commencer, assurez-vous que **Docker** est bien installé sur votre machine.
 
 1. **Cloner le projet** :
-   Lancer un terminal
-   git clone https://github.com/naej2004/TD_Docker_Compose.git
-   cd TD_Docker_Compose
-   cd wordpress-docker
-   docker compose up -d
+  - Lancer un terminal
+  - git clone https://github.com/naej2004/TD_Docker_Compose.git
+  - cd TD_Docker_Compose
+  - cd wordpress-docker
+  - docker compose up -d
