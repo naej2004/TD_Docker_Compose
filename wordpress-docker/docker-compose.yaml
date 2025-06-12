@@ -18,7 +18,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: Naej2004@#     # ➤ Mot de passe pour l’utilisateur "root"
       MYSQL_DATABASE: td_wordpress_mysql        # ➤ Nom de la base créée au démarrage
-      MYSQL_USER: naej               # ➤ Nom d’un nouvel utilisateur
+      MYSQL_USER: Naej               # ➤ Nom d’un nouvel utilisateur
       MYSQL_PASSWORD: Naej2004@#           # ➤ Son mot de passe
 
   # --- SERVICE 2 : WordPress (le site web/blog)
@@ -37,7 +37,7 @@ services:
     # ➤ Variables d’environnement pour que WordPress se connecte à la BDD
     environment:
       WORDPRESS_DB_HOST: db:3306        # ➤ Adresse du service "db" sur le port 3306 (port standard MySQL)
-      WORDPRESS_DB_USER: naej        # ➤ Correspond à celui défini dans db
+      WORDPRESS_DB_USER: Naej        # ➤ Correspond à celui défini dans db
       WORDPRESS_DB_PASSWORD: Naej2004@#    # ➤ Idem, correspond au mot de passe défini pour l'utilisateur
       WORDPRESS_DB_NAME: td_wordpress_mysql      # ➤ Nom de la base, doit correspondre aussi
 
